@@ -1,0 +1,43 @@
+
+
+<h1>Dashboard</h1>
+<hr>
+<mat-sidenav-container class="container">
+    <mat-sidenav mode="side" opened class="sidebar">
+        <mat-nav-list class="sidebar-nav">
+          <mat-list-item>
+            <mat-icon matListIcon>chat</mat-icon>
+            <a matLine href="#">AIVA</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>mobile_screen_share</mat-icon>
+            <a matLine href="#">ONLINE</a>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon matListIcon>recent_actors</mat-icon>
+            <a matLine href="#">GIRH</a>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-sidenav>
+      
+  
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <span>{{usuario.email}}</span><button (click)="logout()">
+            Logout
+        </button>
+      </mat-toolbar>
+  
+      <!-- Contenido principal -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+<!-- <p>
+    Esta página sólo funciona si estás autenticado
+</p> -->
+
+<!-- <h4>User info</h4>
+    
+<pre>{{ usuario | json }}</pre> -->
+
